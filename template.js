@@ -1,3 +1,4 @@
+
 AutoForm.addInputType('medium', {
     template: 'afMedium',
     valueOut: function() {
@@ -17,6 +18,17 @@ function initializeMediumEditor(options){
 
     var editor = new MediumEditor(input, opts);
 
+    if(this.data.atts.minHeight){
+        $(".medium-editor").height(this.data.atts.minHeight);
+    }
+
+    
+    if(this.data.atts.insertPlugin){
+        $('.editable').mediumInsert({
+            editor: editor
+        });
+    }
+    
     // TODO: restore when medium editor fixe deactivate
     /*
     Meteor.setTimeout((function(_this) {
