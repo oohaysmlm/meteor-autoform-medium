@@ -1,8 +1,13 @@
+import sanitize from "sanitize-html"
+sanitizeHtml = sanitize;
 
 AutoForm.addInputType('medium', {
     template: 'afMedium',
     valueOut: function() {
-        return this[0].innerHTML;
+        var dirty = this[0].innerHTML;
+        return sanitizeHtml(dirty, {
+          allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'img' ])
+        });
     },
     contextAdjust: function(context) {
         return context;

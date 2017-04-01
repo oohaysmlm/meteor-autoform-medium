@@ -9,7 +9,8 @@ Package.describe({
 Npm.depends(
   {
     "meteor-node-stubs": "0.2.3",
-    'medium-editor-insert-plugin':'2.3.2'
+    'medium-editor-insert-plugin':'2.3.2',
+    "sanitize-html":'1.14.1',
   }
 );
 
