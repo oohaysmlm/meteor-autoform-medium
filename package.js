@@ -1,6 +1,6 @@
 Package.describe({
   name: 'gildaspk:autoform-medium',
-  version: '0.0.6',
+  version: '0.0.7',
   summary: "Medium editor for AutoForm",
   description: "Medium editor for AutoForm",
   git: "http://github.com/djhi/meteor-autoform-medium.git"
